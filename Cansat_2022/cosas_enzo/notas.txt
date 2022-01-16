@@ -1,0 +1,36 @@
+Componentes :
+
+    * 2 servos
+    * 1 arduino mega
+    * placa controladora gimball
+    * 3 motores del gimball
+    * camara
+    * 2 modulo xbee
+    2 imu wabeshare
+    * adfrauit gps
+
+Enlaces Utiles:
+
+* Pila 18650: https://www.18650batterystore.com/collections/18650-batteries/products/epoch-18650-3500mah-10a
+* Pila 14500: https://www.18650batterystore.com/collections/14500-batteries/products/epoch-14500-1000mah-buttontop
+* Storm32: http://www.olliw.eu/storm32bgc-wiki/Main_Page
+* Github del proyecto: https://github.com/olliw42/storm32bgc
+* Pagina del Proyecto: http://www.olliw.eu/2013/storm32bgc/#termsofusageboard
+
+Motor Gimball 2208
+
+
+Conceptos de Carga y Descarga:
+1- Caracteristicas
+Caracteristicas de la Bateria:
+    * V = 12V   I = 9A
+Caracteristicas del Componente:
+    * V = 12V   I = 2A
+
+2- Niveles de Descarga- Tiempo de Descarga
+    t = Ibat / Icomponente  = 9A/2A = 4.5H
+
+3_ Vida util Bateria
+
+Ciclo = Carga y Descarga de la Bateria
+    * Entre 250 ciclos y 2000 aprox
