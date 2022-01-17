@@ -34,3 +34,10 @@ Caracteristicas del Componente:
 
 Ciclo = Carga y Descarga de la Bateria
     * Entre 250 ciclos y 2000 aprox
+
+
+
+------------------------
+2 motores 2208 80T consumo ---> idle current amps: 0.03A
+
+Bateria---> Samsung 18650 3,7V 3500mAh
