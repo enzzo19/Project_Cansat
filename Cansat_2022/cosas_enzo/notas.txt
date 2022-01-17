@@ -16,6 +16,8 @@ Enlaces Utiles:
 * Storm32: http://www.olliw.eu/storm32bgc-wiki/Main_Page
 * Github del proyecto: https://github.com/olliw42/storm32bgc
 * Pagina del Proyecto: http://www.olliw.eu/2013/storm32bgc/#termsofusageboard
+* Modulo setpup: https://articulo.mercadolibre.com.ar/MLA-918901312-modulo-step-up-2a-dc-dc-xy-016-unoelectro-_JM#position=2&search_layout=grid&type=item&tracking_id=1d25a058-7e0d-4e33-b67b-775ba760cbe4
+
 
 Motor Gimball 2208
 
