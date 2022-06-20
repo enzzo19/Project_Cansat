@@ -133,6 +133,8 @@ bmp.setSampling(Adafruit_BMP280::MODE_NORMAL,     /* Operating Mode. */
                   Adafruit_BMP280::STANDBY_MS_500); /* Standby time. */
 calibratealtitude=1;
 while (bmp.readAltitude(calibratealtitude)<0) {
+  Serial.println("altitude");
+  Serial.println(String(calibratealtitude));
 calibratealtitude=calibratealtitude+1;
                            }
 while (bmp.readAltitude(calibratealtitude)>=0) {
@@ -264,10 +266,12 @@ if (Serial2.available() > 0) {
 
 
 if (imu_data_ready) {
+    Serial.println("DATA");
     imu_data_ready = false;
     /* Read the MPU 9250 data */
     IMU.readSensor();
     ax = IMU.getAccelX_mss();
+    Serial.println(String(ax));
     ay = IMU.getAccelY_mss();
     az = IMU.getAccelZ_mss();
     hx = IMU.getMagX_uT();
@@ -276,8 +280,6 @@ if (imu_data_ready) {
     gx = IMU.getGyroX_rads();
     gy = IMU.getGyroY_rads();
     gz = IMU.getGyroZ_rads();
-    Serial.println("gzzzz");
-    Serial.println(String(gz));
     /* Normalize accelerometer and magnetometer data */
     a = sqrtf(ax * ax + ay * ay + az * az);
     ax /= a;
@@ -304,7 +306,7 @@ heading_rad = constrainAngle180(yaw_rad);
     //Serial.print("\t");
     //Serial.print(heading_rad * R2D);
     //Serial.print("\t");
-    //Serial.println(filtered_heading_rad * R2D);
+    Serial.println(filtered_heading_rad * R2D);
   }
 
 /////////////////////
@@ -368,21 +370,21 @@ if (camera==2 && millis()>= Timep3+550){
 }
 
 
-//
-//if (camera==3 && millis()>=Timep3+1000){
-//  Serial.println("CAMXXX");
-//   digitalWrite(4, LOW);
-//   Timep3=millis();
-//   Serial.println(String(millis()));
-//camera=4;
-//}
-//if (camera==4 && millis()>= Timep3+550){
-//  Serial.println("CAMYYYY");
-//   digitalWrite(4, HIGH);
-//   camera=0;
-//   Serial.println(String(millis()));
-//   Timep3=millis();
-//}
+
+if (camera==3 && millis()>=Timep3+1000){
+  Serial.println("CAMXXX");
+   digitalWrite(4, LOW);
+   Timep3=millis();
+   Serial.println(String(millis()));
+camera=4;
+}
+if (camera==4 && millis()>= Timep3+550){
+  Serial.println("CAMYYYY");
+   digitalWrite(4, HIGH);
+   camera=0;
+   Serial.println(String(millis()));
+   Timep3=millis();
+}
 
 
 
